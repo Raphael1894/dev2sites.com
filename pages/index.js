@@ -1,5 +1,9 @@
-const HomePage = () => {
-	return <h1>home</h1>;
-};
+import './index.module.scss';
 
-export default HomePage;
+const HomePage = () => {
+  return (
+    <h1>App</h1>
+  )
+}
+
+export default HomePage
