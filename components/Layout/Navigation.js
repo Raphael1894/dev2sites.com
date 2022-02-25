@@ -27,16 +27,16 @@ const Navigation = () => {
 			<div className={classes.app__navbar_menu}>
 				<HiMenuAlt4 onClick={() => setToggle(true)} />
 				{toggle && (
-					<motion.div whileInView={{ x: [ 300, 0 ] }} transition={{ duration: 0.85, ease: 'easeOut' }}>
+					<motion.div whileInView={{ x: [ 300, 0 ], opacity: [ 0, 1 ] }} transition={{ duration: 0.85, ease: 'easeOut' }} className={classes.app__navbar_motion}>
 						<HiX onClick={() => setToggle(false)} />
 						<ul>
-							<li>
-								<Link onClick={() => setToggle(false)} href="/">
+							<li onClick={() => setToggle(false)}>
+								<Link href="/">
 									Home
 								</Link>
 							</li>
-							<li>
-								<Link onClick={() => setToggle(false)} href="/about">
+							<li onClick={() => setToggle(false)}>
+								<Link href="/about">
 									About
 								</Link>
 							</li>

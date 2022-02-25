@@ -1,9 +1,15 @@
-import './index.module.scss';
+import Guarantees from '../components/Guarantees/Guarantees';
+import Header from '../components/Header/Header';
+import Offers from '../components/Offers/Offers';
 
 const HomePage = () => {
-  return (
-    <h1>App</h1>
-  )
-}
+	return (
+		<div className="app">
+			<Header />
+			<Guarantees />
+			<Offers />
+		</div>
+	);
+};
 
-export default HomePage
+export default HomePage;
