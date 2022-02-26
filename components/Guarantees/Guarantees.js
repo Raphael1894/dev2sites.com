@@ -32,12 +32,12 @@ const Guarantees = () => {
 		{
 			title: 'Une collaboration pérenne',
 			description: "Je m'engage à développer mes compétences a fin d'offrir les meilleures prestations'",
-			url: images.about01
+			url: images.about05
 		},
 		{
 			title: '0 maux de têtes',
 			description: 'Un interlocuteur, une expérience fluide',
-			url: images.about02
+			url: images.about06
 		}
 	];
 

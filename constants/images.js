@@ -11,6 +11,8 @@ import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
+import about05 from '../assets/about05.jpg';
+import about06 from '../assets/about06.jpg';
 
 import email from '../assets/email.png'
 import mobile from '../assets/mobile.png'
@@ -27,6 +29,8 @@ export default {
 	about02,
 	about03,
 	about04,
+	about05,
+	about06,
 	email,
 	mobile
 };
