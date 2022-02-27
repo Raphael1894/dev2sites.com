@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Fragment } from 'react';
 import Image from 'next/image';
 import { images } from '../../constants';
 import AppWrapper from '../AppWrapper/AppWrapper';
@@ -58,7 +57,7 @@ const Guarantees = () => {
 						key={guarantee.title + index}
 					>
 						<div className={classes.image_wrapper}>
-							<Image src={guarantee.url} alt={guarantee.title} />
+							<Image src={guarantee.url} alt={guarantee.title} layout={'fill'}/>
 						</div>
 						<h2 className="bold-text" style={{ marginTop: 20 }}>
 							{guarantee.title}
