@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Head from 'next/head';
 import PackJeuneEntreprise from '../../components/Services/PackJeuneEntreprise/PackJeuneEntreprise';
 import SiteVitrine from '../../components/Services/SiteVitrine/SiteVitrine';
 import VitrineBdD from '../../components/Services/VitrineBdD/VitrineBdD';
@@ -10,14 +11,23 @@ import classes from './Services.module.scss';
 const Services = () => {
 	return (
 		<Fragment>
-			<h2 className={`${classes.padding} ${'head-text'}`}>Page actuellement <span>en développement</span></h2>
+			<Head>
+				<title>Dev2sites - Services</title>
+				<meta
+					name="description"
+					content="Trouvez les différents services proposés par dev2sites."
+				/>
+			</Head>
+			<h2 className={`${classes.padding} ${'head-text'}`}>
+				Page actuellement <span>en développement</span>
+			</h2>
 			<h2>Services</h2>
 			<PackJeuneEntreprise />
 			<SiteVitrine />
 			<VitrineBdD />
-			<ForfaitGestion/>
-			<ForfaitMaintenance/>
-			<DemandesPonctuelles/>
+			<ForfaitGestion />
+			<ForfaitMaintenance />
+			<DemandesPonctuelles />
 		</Fragment>
 	);
 };
