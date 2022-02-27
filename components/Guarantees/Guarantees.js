@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { images } from '../../constants';
 import AppWrapper from '../AppWrapper/AppWrapper';
 import MotionWrapper from '../AppWrapper/MotionWrapper';
 import classes from './Guarantees.module.scss';
@@ -10,33 +8,33 @@ const Guarantees = () => {
 		{
 			title: 'Un site sécurisé',
 			description: 'la sécurité sur un site internet est fondamentale et est au coeur de toutes mes offres',
-			url: images.about01
+			url: '/about01.png'
 		},
 		{
 			title: 'Des fontionnalitées adaptées',
 			description: 'Selon vos besoins, je vous conseille pour trouver les meilleures éléments à développer',
-			url: images.about02
+			url: '/about02.png'
 		},
 		{
 			title: 'Adequation avec votre budget',
 			description:
 				"J'adapte les services selon vos besoin, et je recherche les hebergeur proposant les meilleures prix avec une bonne fiabilitée",
-			url: images.about03
+			url: "/about03.png"
 		},
 		{
 			title: 'De la transparence',
 			description: 'Pas de frais cachés et des décisions avant tout axés sur vos besoins',
-			url: images.about04
+			url: '/about04.png'
 		},
 		{
 			title: 'Une collaboration pérenne',
 			description: "Je m'engage à développer mes compétences a fin d'offrir les meilleures prestations'",
-			url: images.about05
+			url: '/about05.png'
 		},
 		{
 			title: '0 maux de têtes',
 			description: 'Un interlocuteur, une expérience fluide',
-			url: images.about06
+			url: '/about06.png'
 		}
 	];
 
@@ -57,7 +55,7 @@ const Guarantees = () => {
 						key={guarantee.title + index}
 					>
 						<div className={classes.image_wrapper}>
-							<Image src={guarantee.url} alt={guarantee.title} layout={'fill'}/>
+							<img src={guarantee.url} alt={guarantee.title}/>
 						</div>
 						<h2 className="bold-text" style={{ marginTop: 20 }}>
 							{guarantee.title}

@@ -1,10 +1,9 @@
 import AppWrapper from '../AppWrapper/AppWrapper';
 import MotionWrapper from '../AppWrapper/MotionWrapper';
-import { images } from '../../constants';
-import Image from 'next/image';
+
 import classes from './Footer.module.scss';
 import emailjs from '@emailjs/browser';
-import { Fragment, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 const Footer = () => {
 	const form = useRef();
@@ -37,7 +36,6 @@ const Footer = () => {
 				setIsFormSubmitted(true);
 			}
 		);
-
 	};
 
 	return (
@@ -46,13 +44,13 @@ const Footer = () => {
 			<div className={classes.app__footer_cards}>
 				<a href="mailto:contact@dev2sites.com" className="p-text">
 					<div className={classes.app__footer_card}>
-						<Image src={images.email} alt="email" width={'60%'} height={'60%'} />
+						<img src="/email.png" alt="email"/>
 						<span>contact@dev2sites.com</span>
 					</div>
 				</a>
 				<a href="tel:0769953111" className="p-text">
 					<div id={classes.app_footer_mobile} className={classes.app__footer_card}>
-						<Image src={images.mobile} alt="mobile" width={'60%'} height={'60%'} />
+						<img src="/mobile.png" alt="mobile" />
 						<span>07.69.95.31.11</span>
 					</div>
 				</a>
@@ -97,14 +95,18 @@ const Footer = () => {
 				</form>
 			) : sendFailed ? (
 				<div>
-					<h3 className="head-text">Un problème est survenue lors de l'envoie du message. Veuillez réessayer plus tard</h3>
+					<h3 className="head-text">
+						Un problème est survenue lors de l'envoie du message. Veuillez réessayer plus tard
+					</h3>
 				</div>
 			) : (
 				<div>
-					<h3 className="head-text">Merci pour votre <span>message</span> !</h3>
+					<h3 className="head-text">
+						Merci pour votre <span>message</span> !
+					</h3>
 				</div>
 			)}
-				<p className={classes.app__footer_signing}>@2022 - PEREIRA Raphaël</p>
+			<p className={classes.app__footer_signing}>@2022 - PEREIRA Raphaël</p>
 		</section>
 	);
 };

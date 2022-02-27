@@ -1,7 +1,6 @@
 import { Fragment, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import classes from './NavigationDots.module.scss';
 
 const NavigationDots = ({ active }) => {
 	const { pathname } = useRouter();

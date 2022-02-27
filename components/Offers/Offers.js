@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import AppWrapper from '../AppWrapper/AppWrapper';
 import MotionWrapper from '../AppWrapper/MotionWrapper';
 import Link from 'next/link';
-import { images } from '../../constants';
-import Image from 'next/image';
 import classes from './Offers.module.scss';
 
 const Offers = () => {
@@ -16,35 +14,35 @@ const Offers = () => {
 			title: 'Pack Jeune Entreprise',
 			description: 'Pour démarrer simplement',
 			price: '500€',
-			url: images.about01,
+			url: '/about01.png',
 			type: 'PackJeuneEntreprise'
 		},
 		{
 			title: 'Site Vitrine',
 			description: 'Une vitrine sur mesure',
 			price: 'A partir de 1000€',
-			url: images.about02,
+			url: '/about02.png',
 			type: 'SiteVitrine'
 		},
 		{
 			title: 'Site Vitrine BdD',
 			description: 'Elle répond à toutes vos envies',
 			price: 'A partir de 1500€',
-			url: images.about03,
+			url: '/about03.png',
 			type: 'VitrineBdD'
 		},
 		{
 			title: 'Forfait Gestion',
 			description: 'Ça vous simplifie la vie',
 			price: '200€/mois',
-			url: images.about04,
+			url: '/about04.png',
 			type: 'ForfaitGestion'
 		},
 		{
 			title: 'Forfait Maintenance',
 			description: `Pour une tranquilitée d'esprit`,
 			price: '200€/mois',
-			url: images.about05,
+			url: '/about05.png',
 			type: 'ForfaitMaintenance'
 		}
 	];
@@ -54,10 +52,11 @@ const Offers = () => {
 			title: 'Demandes Ponctuelles',
 			description: 'Pour toute autre raison',
 			price: '50€/heure',
-			url: images.about06,
+			url: '/about06.png',
 			type: 'DemandesPonctuelles'
 		}
 	];
+
 	return (
 		<div className={classes.app__offers}>
 			<h2 className="head-text">
@@ -71,7 +70,7 @@ const Offers = () => {
 				{offersList.map((offer, index) => (
 					<div className={`${classes.app__offer_item} ${'app__flex'}`} key={index}>
 						<div className={`${classes.app__offer_img} ${'app__flex'}`}>
-							<Image src={offer.url} alt={offer.title} layout={'fill'} />
+							<img src={offer.url} alt={offer.title} />
 							<motion.div
 								whileHover={{ opacity: [ 0, 1 ] }}
 								transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
@@ -110,7 +109,7 @@ const Offers = () => {
 				{offerWork.map((offer, index) => (
 					<div className={`${classes.app__offer_item} ${'app__flex'}`} key={index}>
 						<div className={`${classes.app__offer_img} ${'app__flex'}`}>
-							<Image src={offer.url} alt={offer.title} layout={'fill'} />
+							<img src={offer.url} alt={offer.title}/>
 							<motion.div
 								whileHover={{ opacity: [ 0, 1 ] }}
 								transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}

@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
 
 import classes from './Navigation.module.scss';
 
 const Navigation = () => {
 	const [ toggle, setToggle ] = useState(false);
+
 	return (
 		<nav className={classes.app__navbar}>
 			<div className={classes.app__navbar_logo}>
-				<Image src={images.orangeLogo} alt="logo" />
+				<Link href="/">
+					<img src="/orangeLogo.png" alt="logo" />
+				</Link>
 			</div>
 			<ul className={classes.app__navbar_links}>
 				<li className="app__flex p-text">

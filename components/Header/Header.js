@@ -1,7 +1,5 @@
 import classes from './Header.module.scss';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
-import Image from 'next/image';
 import AppWrapper from '../AppWrapper/AppWrapper';
 
 const Header = () => {
@@ -15,6 +13,7 @@ const Header = () => {
 			}
 		}
 	};
+
 	return (
 		<div className={`${classes.app__header} ${'app__flex'}`}>
 			<motion.div
@@ -27,8 +26,8 @@ const Header = () => {
 					<div className={`${classes.badge_cmp} ${'app__flex'}`}>
 						<span>👋</span>
 						<div style={{ marginLeft: 20 }}>
-							<p className="p-text">Hello, I am </p>
-							<h1 className="head-text">Tester</h1>
+							<p className="p-text">Bonjour et </p>
+							<h1 className="head-text">Bienvenue</h1>
 						</div>
 					</div>
 
@@ -45,12 +44,9 @@ const Header = () => {
 				className={classes.app__header_img}
 			>
 				<span>
-					<Image
-						src={images.programming}
+					<img
+						src="/programming.svg"
 						alt="programming image"
-						width={'500%'}
-						height={'500%'}
-						objectFit={'contain'}
 					/>
 				</span>
 				<motion.div
@@ -60,7 +56,7 @@ const Header = () => {
 					alt="circle"
 					className={classes.overlay_circle}
 				>
-					<Image src={images.circle} alt="circle" />
+					<img src="/circle.svg" alt="circle"/>
 				</motion.div>
 			</motion.div>
 
@@ -69,9 +65,9 @@ const Header = () => {
 				whileInView={scaleVariants.whileInView}
 				className={classes.app__header_circles}
 			>
-				{[ images.html, images.react, images.sass ].map((circle, index) => (
+				{[ '/firebase.png', '/react.png', '/sass.png' ].map((circle, index) => (
 					<div className={`${classes.circle_cmp} ${'app__flex'}`} key={index}>
-						<Image src={circle} alt="circle" />
+						<img src={circle} alt="circle"/>
 					</div>
 				))}
 			</motion.div>
