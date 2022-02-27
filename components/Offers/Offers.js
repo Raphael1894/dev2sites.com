@@ -30,7 +30,10 @@ const Offers = () => {
 			price: 'A partir de 1500€',
 			url: '/about03.png',
 			type: 'VitrineBdD'
-		},
+		}
+	];
+
+	const offerPackages = [
 		{
 			title: 'Forfait Gestion',
 			description: 'Ça vous simplifie la vie',
@@ -100,7 +103,44 @@ const Offers = () => {
 					</div>
 				))}
 			</motion.div>
-
+			<motion.div
+				animate={animateCard}
+				transition={{ duration: 0.5, delayChildren: 0.5 }}
+				className={classes.app__offers_portfolio}
+			>
+				{offerPackages.map((offer, index) => (
+					<div className={`${classes.app__offer_item} ${'app__flex'}`} key={index}>
+						<div className={`${classes.app__offer_img} ${'app__flex'}`}>
+							<img src={offer.url} alt={offer.title} />
+							<motion.div
+								whileHover={{ opacity: [ 0, 1 ] }}
+								transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
+								className={`${classes.app__offer_hover} ${'app__flex'}`}
+							>
+								<Link href={`/Services/#${offer.type}`}>
+									<motion.div
+										whileInView={{ scale: [ 0, 1 ] }}
+										whileHover={{ scale: [ 1, 0.9 ] }}
+										transition={{ duration: 0.25 }}
+										className="app__flex"
+									>
+										<AiFillEye />
+									</motion.div>
+								</Link>
+							</motion.div>
+						</div>
+						<div className={`${classes.app__offer_content} ${'app__flex'}`}>
+							<h4 className="bold-text">{offer.title}</h4>
+							<p className="p-text" style={{ marginTop: 10 }}>
+								{offer.description}
+							</p>
+							<div className={`${classes.app__offer_tag} ${'app__flex'}`}>
+								<p className="p-text">{offer.price}</p>
+							</div>
+						</div>
+					</div>
+				))}
+			</motion.div>
 			<motion.div
 				animate={animateCard}
 				transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -109,7 +149,7 @@ const Offers = () => {
 				{offerWork.map((offer, index) => (
 					<div className={`${classes.app__offer_item} ${'app__flex'}`} key={index}>
 						<div className={`${classes.app__offer_img} ${'app__flex'}`}>
-							<img src={offer.url} alt={offer.title}/>
+							<img src={offer.url} alt={offer.title} />
 							<motion.div
 								whileHover={{ opacity: [ 0, 1 ] }}
 								transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
