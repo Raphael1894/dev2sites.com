@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGitHub } from 'react-icons/ai';
+import { AiFillEye } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import AppWrapper from '../AppWrapper/AppWrapper';
 import MotionWrapper from '../AppWrapper/MotionWrapper';
@@ -14,28 +14,52 @@ const Offers = () => {
 	const offersList = [
 		{
 			title: 'Pack Jeune Entreprise',
-			description: 'la sécurité sur un site internet est fondamentale et est au coeur de toutes mes offres',
-			price: '500euros',
+			description: 'la sécurité sur un site interne',
+			price: '500€',
 			url: images.about01,
 			type: 'PackJeuneEntreprise'
 		},
 		{
-			title: 'Site vitrine',
-			description: 'la sécurité sur un site internet est fondamentale et est au coeur de toutes mes offres',
-			price: 'A partir de 1000euros',
+			title: 'Site Vitrine',
+			description: 'la sécurité sur un site internet es',
+			price: 'A partir de 1000€',
 			url: images.about02,
 			type: 'SiteVitrine'
 		},
 		{
-			title: 'Site vitrine BdD',
-			description: 'la sécurité sur un site internet est fondamentale et est au coeur de toutes mes offres',
-			price: 'A partir de 1500euros',
+			title: 'Site Vitrine BdD',
+			description: 'la sécurité sur un site int',
+			price: 'A partir de 1500€',
 			url: images.about03,
 			type: 'VitrineBdD'
+		},
+		{
+			title: 'Forfait Gestion',
+			description: 'la sécurité sur un site internet es',
+			price: '200€/mois',
+			url: images.about04,
+			type: 'ForfaitGestion'
+		},
+		{
+			title: 'Forfait Maintenance',
+			description: 'la sécurité sur un site internet es',
+			price: '200€/mois',
+			url: images.about05,
+			type: 'ForfaitMaintenance'
+		}
+	];
+
+	const offerWork = [
+		{
+			title: 'Demandes Ponctuelles',
+			description: 'la sécurité sur un site interne',
+			price: '50€/heure',
+			url: images.about06,
+			type: 'DemandesPonctuelles'
 		}
 	];
 	return (
-		<div className={classes.app__works}>
+		<div className={classes.app__offers}>
 			<h2 className="head-text">
 				Mes Differents<span> Services</span>
 			</h2>
@@ -47,19 +71,71 @@ const Offers = () => {
 				{offersList.map((offer, index) => (
 					<div className={`${classes.app__offer_item} ${'app__flex'}`} key={index}>
 						<div className={`${classes.app__offer_img} ${'app__flex'}`}>
-							<div className={classes.image_wrapper}>
-								<Image src={offer.url} alt={offer.title} width={'150px'} height={'150px'} />
-							</div>
+							<Image src={offer.url} alt={offer.title} layout={'fill'} />
 							<motion.div
 								whileHover={{ opacity: [ 0, 1 ] }}
 								transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
 								className={`${classes.app__offer_hover} ${'app__flex'}`}
 							>
-                {console.log(index)}
-                <Link href={`/Services/#${offer.type}`}>{offer.title}
-
-              </Link>
+								<Link href={`/Services/#${offer.type}`}>
+									<motion.div
+										whileInView={{ scale: [ 0, 1 ] }}
+										whileHover={{ scale: [ 1, 0.9 ] }}
+										transition={{ duration: 0.25 }}
+										className="app__flex"
+									>
+										<AiFillEye />
+									</motion.div>
+								</Link>
 							</motion.div>
+						</div>
+						<div className={`${classes.app__offer_content} ${'app__flex'}`}>
+							<h4 className="bold-text">{offer.title}</h4>
+							<p className="p-text" style={{ marginTop: 10 }}>
+								{offer.description}
+							</p>
+							<div className={`${classes.app__offer_tag} ${'app__flex'}`}>
+								<p className="p-text">{offer.price}</p>
+							</div>
+						</div>
+					</div>
+				))}
+			</motion.div>
+
+			<motion.div
+				animate={animateCard}
+				transition={{ duration: 0.5, delayChildren: 0.5 }}
+				className={classes.app__offers_portfolio}
+			>
+				{offerWork.map((offer, index) => (
+					<div className={`${classes.app__offer_item} ${'app__flex'}`} key={index}>
+						<div className={`${classes.app__offer_img} ${'app__flex'}`}>
+							<Image src={offer.url} alt={offer.title} layout={'fill'} />
+							<motion.div
+								whileHover={{ opacity: [ 0, 1 ] }}
+								transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
+								className={`${classes.app__offer_hover} ${'app__flex'}`}
+							>
+								<Link href={`/Services/#${offer.type}`}>
+									<motion.div
+										whileInView={{ scale: [ 0, 1 ] }}
+										whileHover={{ scale: [ 1, 0.9 ] }}
+										transition={{ duration: 0.25 }}
+										className="app__flex"
+									>
+										<AiFillEye />
+									</motion.div>
+								</Link>
+							</motion.div>
+						</div>
+						<div className={`${classes.app__offer_content} ${'app__flex'}`}>
+							<h4 className="bold-text">{offer.title}</h4>
+							<p className="p-text" style={{ marginTop: 10 }}>
+								{offer.description}
+							</p>
+							<div className={`${classes.app__offer_tag} ${'app__flex'}`}>
+								<p className="p-text">{offer.price}</p>
+							</div>
 						</div>
 					</div>
 				))}
@@ -69,4 +145,3 @@ const Offers = () => {
 };
 
 export default AppWrapper(MotionWrapper(Offers, 'app__works'), 'offers', 'app__primarybg');
-//  {index === 0 ? (<Link href='/Services/#PackJeuneEntreprise'/>) : index === 1 ? (<Link href='/Services/#SiteVitrine'/>) : index === 2 ? (<Link href='/Services/#VitrineBdD'/>) : <div/>}

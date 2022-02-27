@@ -38,22 +38,40 @@ const NavigationDots = ({ active }) => {
 				</div>
 			) : (
 				<div className="app__navigation">
-					<Link href={'/'}>
+					<Link href={`#PackJeuneEntreprise`}>
 						<a
 							className="app__navigation-dot"
 							style={active === 'PackJeuneEntreprise' ? { backgroundColor: '#313BAC' } : {}}
 						/>
 					</Link>
-					<Link href={`#guarantees`}>
+					<Link href={`#SiteVitrine`}>
 						<a
 							className="app__navigation-dot"
 							style={active === 'SiteVitrine' ? { backgroundColor: '#313BAC' } : {}}
 						/>
 					</Link>
-					<Link href={`#offers`}>
+					<Link href={`#VitrineBdD`}>
 						<a
 							className="app__navigation-dot"
 							style={active === 'VitrineBdD' ? { backgroundColor: '#313BAC' } : {}}
+						/>
+					</Link>
+					<Link href={`#ForfaitGestion`}>
+						<a
+							className="app__navigation-dot"
+							style={active === 'ForfaitGestion' ? { backgroundColor: '#313BAC' } : {}}
+						/>
+					</Link>
+					<Link href={`#ForfaitMaintenance`}>
+						<a
+							className="app__navigation-dot"
+							style={active === 'ForfaitMaintenance' ? { backgroundColor: '#313BAC' } : {}}
+						/>
+					</Link>
+					<Link href={`#DemandesPonctuelles`}>
+						<a
+							className="app__navigation-dot"
+							style={active === 'DemandesPonctuelles' ? { backgroundColor: '#313BAC' } : {}}
 						/>
 					</Link>
 					<Link href={`#contact`}>
