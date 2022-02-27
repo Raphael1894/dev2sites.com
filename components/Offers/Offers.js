@@ -14,35 +14,35 @@ const Offers = () => {
 	const offersList = [
 		{
 			title: 'Pack Jeune Entreprise',
-			description: 'la sécurité sur un site interne',
+			description: 'Pour démarrer simplement',
 			price: '500€',
 			url: images.about01,
 			type: 'PackJeuneEntreprise'
 		},
 		{
 			title: 'Site Vitrine',
-			description: 'la sécurité sur un site internet es',
+			description: 'Une vitrine sur mesure',
 			price: 'A partir de 1000€',
 			url: images.about02,
 			type: 'SiteVitrine'
 		},
 		{
 			title: 'Site Vitrine BdD',
-			description: 'la sécurité sur un site int',
+			description: 'Elle répond à toutes vos envies',
 			price: 'A partir de 1500€',
 			url: images.about03,
 			type: 'VitrineBdD'
 		},
 		{
 			title: 'Forfait Gestion',
-			description: 'la sécurité sur un site internet es',
+			description: 'Ça vous simplifie la vie',
 			price: '200€/mois',
 			url: images.about04,
 			type: 'ForfaitGestion'
 		},
 		{
 			title: 'Forfait Maintenance',
-			description: 'la sécurité sur un site internet es',
+			description: `Pour une tranquilitée d'esprit`,
 			price: '200€/mois',
 			url: images.about05,
 			type: 'ForfaitMaintenance'
@@ -52,7 +52,7 @@ const Offers = () => {
 	const offerWork = [
 		{
 			title: 'Demandes Ponctuelles',
-			description: 'la sécurité sur un site interne',
+			description: 'Pour toute autre raison',
 			price: '50€/heure',
 			url: images.about06,
 			type: 'DemandesPonctuelles'

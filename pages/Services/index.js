@@ -10,6 +10,7 @@ import classes from './Services.module.scss';
 const Services = () => {
 	return (
 		<Fragment>
+			<h2 className={`${classes.padding} ${'head-text'}`}>Page actuellement <span>en développement</span></h2>
 			<h2>Services</h2>
 			<PackJeuneEntreprise />
 			<SiteVitrine />
