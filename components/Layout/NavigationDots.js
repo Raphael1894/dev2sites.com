@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const NavigationDots = ({ active }) => {
 	const { pathname } = useRouter();
 	const [ path, setPath ] = useState(pathname);
-	console.log(pathname);
+
 	return (
 		<Fragment>
 			{path === '/' ? (

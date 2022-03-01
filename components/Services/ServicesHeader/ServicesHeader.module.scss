@@ -8,11 +8,8 @@
 	width: 100%;
 	height: 100%;
 	flex-direction: row;
-	padding: 6rem 2rem 0;
+	padding: 6rem 2rem 1rem;
 	z-index: 0;
-	.app__wrapper {
-		padding: 0;
-	}
 
 	@media screen and (min-width: 2000px) {
 		padding-top: 8rem;
@@ -28,7 +25,7 @@
 }
 
 .app__header_info {
-	flex: 0.65;
+	flex: 0.85;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -47,6 +44,7 @@
 	justify-content: flex-end;
 	align-items: flex-end;
 	flex-direction: column;
+	margin: 1rem;
 
 	.badge_cmp,
 	.tag_cmp {
@@ -58,25 +56,6 @@
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 	}
 
-	.tag_cmp {
-		flex-direction: column;
-		margin-top: 3rem;
-
-		p {
-			width: 100%;
-			text-transform: uppercase;
-			text-align: right;
-		}
-	}
-
-	span {
-		font-size: 2.5rem;
-
-		@media screen and (min-width: 2000px) {
-			font-size: 5rem;
-		}
-	}
-
 	@media screen and (max-width: 1200px) {
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -84,13 +63,20 @@
 }
 
 .app__header_circles {
-	flex: 0.75;
 	display: flex;
+	flex: 0.75;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: flex-start;
-	height: 100%;
-	margin-left: 1rem;
+	height: 120%;
+	margin-left: 2rem;
+	z-index: 0;
+
+	img {
+		z-index: 1;
+		width: 100%;
+		height: auto;
+	}
 
 	div {
 		width: 75px;
@@ -98,10 +84,14 @@
 		border-radius: 50%;
 		background: var(--white-color);
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+		img:hover {
+			transform: scale(1.1);
+		}
 	}
 	div:nth-child(1) {
-		width: 60px;
-		height: 60px;
+		width: 110px;
+		height: 110px;
 	}
 	div:nth-child(2) {
 		margin: 1.75rem;
@@ -115,8 +105,8 @@
 
 	@media screen and (min-width: 2000px) {
 		div:nth-child(1) {
-			width: 120px;
-			height: 120px;
+			width: 220px;
+			height: 220px;
 		}
 		div:nth-child(2) {
 			width: 160px;
@@ -149,7 +139,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-
+	margin: 1rem;
+	margin-left: 2rem;
 	span {
 		z-index: 1;
 		width: 90%;
@@ -159,23 +150,5 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
-	}
-}
-
-.overlay_circle {
-	position: absolute;
-	height: 90%;
-	width: 90%;
-	display: flex;
-	z-index: 0;
-	margin: 2rem 0;
-	justify-content: center;
-	align-items: center;
-}
-
-.circle_cmp{
-	img {
-		width: 100%;
-		height: 100%;
 	}
 }
