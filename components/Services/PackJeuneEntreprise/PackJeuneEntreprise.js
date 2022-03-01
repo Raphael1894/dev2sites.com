@@ -1,6 +1,6 @@
 import Card from '../Card/Card';
 import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
-import MotionWrapperLeft from '../../AppWrapper/MotionWrapperLeft';
+import MotionWrapper from '../../AppWrapper/MotionWrapper';
 import classes from './PackJeuneEntreprise.module.scss';
 
 const PackJeuneEntreprise = () => {
@@ -20,4 +20,4 @@ const PackJeuneEntreprise = () => {
 	return <Card infoOffer={infoOffer} />;
 };
 
-export default ServicesWrapper(MotionWrapperLeft(PackJeuneEntreprise, 'app__works'), 'PackJeuneEntreprise', 'app__whitebg');
+export default ServicesWrapper(MotionWrapper(PackJeuneEntreprise, 'app__works'), 'PackJeuneEntreprise', 'app__whitebg');

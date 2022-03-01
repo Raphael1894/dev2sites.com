@@ -1,5 +1,5 @@
 import ServicesWrapper from "../../AppWrapper/ServicesWrapper";
-import MotionWrapperLeft from "../../AppWrapper/MotionWrapperLeft";
+import MotionWrapper from "../../AppWrapper/MotionWrapper";
 import Card from '../Card/Card'
 
 const VitrineBdD = () => {
@@ -22,4 +22,4 @@ const VitrineBdD = () => {
 	);
 };
 
-export default ServicesWrapper(MotionWrapperLeft(VitrineBdD, 'app__works'), 'VitrineBdD', 'app__whitebg');
+export default ServicesWrapper(MotionWrapper(VitrineBdD, 'app__works'), 'VitrineBdD', 'app__whitebg');

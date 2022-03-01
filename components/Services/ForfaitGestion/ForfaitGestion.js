@@ -1,5 +1,5 @@
 import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
-import MotionWrapperRight from '../../AppWrapper/MotionWrapperRight';
+import MotionWrapper from '../../AppWrapper/MotionWrapper';
 import Card from '../Card/Card'
 import classes from './ForfaitGestion.module.scss'
 
@@ -23,4 +23,4 @@ const ForfaitGestion = () => {
 	);
 };
 
-export default ServicesWrapper(MotionWrapperRight(ForfaitGestion, 'app__works'), 'ForfaitGestion', 'app__primarybg');
+export default ServicesWrapper(MotionWrapper(ForfaitGestion, 'app__works'), 'ForfaitGestion', 'app__primarybg');
