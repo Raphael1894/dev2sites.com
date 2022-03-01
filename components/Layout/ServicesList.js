@@ -28,7 +28,6 @@ const ServicesList = () => {
 					<Link href={`#ForfaitGestion`}>Forfait Gestion</Link>
 					<Link href={`#ForfaitMaintenance`}>Forfait maintenance</Link>
 					<Link href={`#DemandesPonctuelles`}>Demandes ponctuelles</Link>
-					<Link href={`#contact`}>Contact</Link>
 				</div>
 			) : (
 				<div />

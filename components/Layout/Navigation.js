@@ -25,6 +25,12 @@ const Navigation = () => {
 					<Link href="/Services">Services</Link>
 				</li>
 			</ul>
+			<ul className={classes.app__navbar_links}>
+				<li className="app__flex p-text">
+					<div />
+					<Link href="/contact">Contact</Link>
+				</li>
+			</ul>
 			<div className={classes.app__navbar_menu}>
 				<HiMenuAlt4 onClick={() => setToggle(true)} />
 				{toggle && (
@@ -40,6 +46,9 @@ const Navigation = () => {
 							</li>
 							<li onClick={() => setToggle(false)}>
 								<Link href="/Services">Services</Link>
+							</li>
+							<li onClick={() => setToggle(false)}>
+								<Link href="/contact">Contact</Link>
 							</li>
 						</ul>
 					</motion.div>

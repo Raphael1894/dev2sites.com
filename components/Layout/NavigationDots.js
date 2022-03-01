@@ -28,12 +28,6 @@ const NavigationDots = ({ active }) => {
 							style={active === 'offers' ? { backgroundColor: '#313BAC' } : {}}
 						/>
 					</Link>
-					<Link href={`#contact`}>
-						<a
-							className="app__navigation-dot"
-							style={active === 'contact' ? { backgroundColor: '#313BAC' } : {}}
-						/>
-					</Link>
 				</div>
 			) : (
 				<div className="app__navigation">
@@ -71,12 +65,6 @@ const NavigationDots = ({ active }) => {
 						<a
 							className="app__navigation-dot"
 							style={active === 'DemandesPonctuelles' ? { backgroundColor: '#313BAC' } : {}}
-						/>
-					</Link>
-					<Link href={`#contact`}>
-						<a
-							className="app__navigation-dot"
-							style={active === 'contact' ? { backgroundColor: '#313BAC' } : {}}
 						/>
 					</Link>
 				</div>

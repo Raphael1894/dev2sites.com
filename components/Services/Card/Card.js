@@ -22,6 +22,21 @@ const Card = ({ infoOffer }) => {
 		setShowArrowDown(true);
 	};
 
+	const container = {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.2
+			}
+		}
+	};
+
+	const item = {
+		hidden: { opacity: 0 },
+		show: { opacity: 1 }
+	};
+
 	return (
 		<div className={classes.app__offers}>
 			<motion.div
@@ -51,7 +66,7 @@ const Card = ({ infoOffer }) => {
 							<hr className={classes.hr} />
 							<p className={classes.detailTitle}>Détails de l'offre</p>
 							<div className={classes.detailsContainer}>
-								<ul>
+								<motion.ul variants={container} initial="hidden" animate="show">
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
 											'Développement du site'
@@ -61,13 +76,14 @@ const Card = ({ infoOffer }) => {
 											''
 										)}
 									</p>
+
 									{infoOffer.listWebsite.map((offer, index) => (
-										<li key={index} className={classes.p_text}>
+										<motion.li variants={item} key={index} className={classes.p_text}>
 											{offer}
-										</li>
+										</motion.li>
 									))}
-								</ul>
-								<ul>
+								</motion.ul>
+								<motion.ul variants={container} initial="hidden" animate="show">
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
 											'Développement du site'
@@ -78,12 +94,12 @@ const Card = ({ infoOffer }) => {
 										)}
 									</p>
 									{infoOffer.listAfter.map((offer, index) => (
-										<li key={index} className={classes.p_text}>
+										<motion.li variants={item} key={index} className={classes.p_text}>
 											{offer}
-										</li>
+										</motion.li>
 									))}
-								</ul>
-								<ul>
+								</motion.ul>
+								<motion.ul variants={container} initial="hidden" animate="show">
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
 											'Développement du site'
@@ -93,12 +109,13 @@ const Card = ({ infoOffer }) => {
 											''
 										)}
 									</p>
+
 									{infoOffer.listMore.map((offer, index) => (
-										<li key={index} className={classes.p_text}>
+										<motion.li variants={item} key={index} className={classes.p_text}>
 											{offer}
-										</li>
+										</motion.li>
 									))}
-								</ul>
+								</motion.ul>
 							</div>
 
 							<hr className={classes.hr} />
