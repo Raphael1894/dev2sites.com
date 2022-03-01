@@ -21,6 +21,7 @@ const ServicesList = () => {
 		<Fragment>
 			{showNav ? (
 				<div className={classes.ServiceList}>
+					<p className={classes.title}>Services</p>
 					<Link href={`#PackJeuneEntreprise`}>Pack Jeune Entreprise</Link>
 					<Link href={`#SiteVitrine`}>Site Vitrine</Link>
 					<Link href={`#VitrineBdD`}>Site vitrine avec base de donnée</Link>

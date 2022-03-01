@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
 
@@ -47,11 +47,62 @@ const Card = ({ infoOffer }) => {
 					</div>
 
 					{showDetails && (
-						<div className={classes.detailsContainer}>
-							<div>
-								<p className={classes.p_text}>{infoOffer.devTime}</p>
+						<Fragment>
+							<hr className={classes.hr} />
+							<p className={classes.detailTitle}>Détails de l'offre</p>
+							<div className={classes.detailsContainer}>
+								<ul>
+									<p className={classes.detailListTitle}>
+										{infoOffer.main.type === 'siteweb' ? (
+											'Développement du site'
+										) : infoOffer.main.type === 'forfait' ? (
+											''
+										) : (
+											''
+										)}
+									</p>
+									{infoOffer.listWebsite.map((offer, index) => (
+										<li key={index} className={classes.p_text}>
+											{offer}
+										</li>
+									))}
+								</ul>
+								<ul>
+									<p className={classes.detailListTitle}>
+										{infoOffer.main.type === 'siteweb' ? (
+											'Développement du site'
+										) : infoOffer.main.type === 'forfait' ? (
+											''
+										) : (
+											'Examples de demandes ponctuelles'
+										)}
+									</p>
+									{infoOffer.listAfter.map((offer, index) => (
+										<li key={index} className={classes.p_text}>
+											{offer}
+										</li>
+									))}
+								</ul>
+								<ul>
+									<p className={classes.detailListTitle}>
+										{infoOffer.main.type === 'siteweb' ? (
+											'Développement du site'
+										) : infoOffer.main.type === 'forfait' ? (
+											''
+										) : (
+											''
+										)}
+									</p>
+									{infoOffer.listMore.map((offer, index) => (
+										<li key={index} className={classes.p_text}>
+											{offer}
+										</li>
+									))}
+								</ul>
 							</div>
-						</div>
+
+							<hr className={classes.hr} />
+						</Fragment>
 					)}
 				</div>
 

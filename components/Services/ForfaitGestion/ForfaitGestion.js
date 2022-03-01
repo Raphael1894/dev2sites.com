@@ -7,12 +7,15 @@ const ForfaitGestion = () => {
 	
 	const infoOffer = {
 		main: {
+			type: 'forfait',
 			title: 'Forfait de gestion',
 			description: `Le forfait gestion vous permet de ne plus vous inquieter du bon fonctionnement de votre site`,
 			price: '200€/mois',
 			url: '/about04.png'
 		},
-		devTime: ''
+		listWebsite: [ '' ],
+		listAfter: ['Gestion des dépendances (ex: GitHub, herbergement)', `Vérification hebdomadaire du bon fonctionnement du site`, 'Sauvegarde mensuelle du site', '0 maux de tête', '_', 'Si vous avez le forfait maintenance et si nécessaire, la maintenance sera effectuée suite à la vérification hebdomadaire'],
+		listMore: [``],
 	};
 
 	return (

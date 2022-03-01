@@ -6,14 +6,16 @@ const DemandesPonctuelles = () => {
 
 	const infoOffer = {
 		main: {
+			type: 'ponctuel',
 			title: 'Demandes ponctuelles',
 			description: `Si vous avez besoin d'apporter une modification à votre site ou d'y faire de la maintenance`,
 			price: '50€/heure',
 			url: '/about06.png'
 		},
-		devTime: 'sur devis'
+		listWebsite: [ '' ],
+		listAfter: [`Maintenance du site`, `Extension du forfait de maintenance`, 'Modifications du site', `Formation utilisation du site`],
+		listMore: [''],
 	};
-
 	return (
 	<Card infoOffer={infoOffer}/>
 	);
