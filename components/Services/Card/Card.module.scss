@@ -184,10 +184,10 @@
 		li {
 			margin-top: 0.5rem;
 			margin-left: 1rem;
-			text-align: left;
-
+			text-align: center;
 			@media screen and (max-width: 900px) {
-				flex-direction: center;
+				margin: 0;
+				text-align: center;
 			}
 		}
 	}
@@ -197,8 +197,14 @@
 
 		li {
 			margin-top: 0.5rem;
-			margin-left: 1rem;
+
 			text-align: center;
+			margin: 0.5rem 2rem;
+
+			@media screen and (max-width: 900px) {
+				margin: 0;
+				text-align: center;
+			}
 		}
 	}
 
@@ -209,9 +215,9 @@
 			margin-top: 0.5rem;
 			margin-right: 1rem;
 			text-align: center;
-
 			@media screen and (max-width: 900px) {
-				flex-direction: column;
+				margin: 0;
+				text-align: center;
 			}
 		}
 	}
