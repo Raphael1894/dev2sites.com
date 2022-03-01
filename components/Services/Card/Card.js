@@ -66,7 +66,7 @@ const Card = ({ infoOffer }) => {
 							<hr className={classes.hr} />
 							<p className={classes.detailTitle}>Détails de l'offre</p>
 							<div className={classes.detailsContainer}>
-								<motion.ul variants={container} initial="hidden" animate="show">
+								<motion.ul variants={container} initial="hidden" animate="show" className={classes.cardUl}>
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
 											'Développement du site'
@@ -83,10 +83,10 @@ const Card = ({ infoOffer }) => {
 										</motion.li>
 									))}
 								</motion.ul>
-								<motion.ul variants={container} initial="hidden" animate="show">
+								<motion.ul variants={container} initial="hidden" animate="show"  className={classes.cardUl}>
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
-											'Développement du site'
+											'Après remise du site'
 										) : infoOffer.main.type === 'forfait' ? (
 											''
 										) : (
@@ -99,10 +99,10 @@ const Card = ({ infoOffer }) => {
 										</motion.li>
 									))}
 								</motion.ul>
-								<motion.ul variants={container} initial="hidden" animate="show">
+								<motion.ul variants={container} initial="hidden" animate="show"  className={classes.cardUl}>
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
-											'Développement du site'
+											'Autres'
 										) : infoOffer.main.type === 'forfait' ? (
 											''
 										) : (

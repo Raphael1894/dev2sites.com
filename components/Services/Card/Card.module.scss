@@ -158,7 +158,7 @@
 
 .detailsContainer {
 	display: flex;
-
+	flex-direction: row;
 	margin-top: 1rem;
 
 	.detailListTitle {
@@ -168,24 +168,31 @@
 		color: var(--secondary-color);
 		line-height: 1.5;
 		margin-bottom: 1rem;
+
+		@media screen and (max-width: 900px) {
+			margin-top: 1rem;
+		}
+
 		@media screen and (min-width: 2000px) {
 			font-size: 1.75rem;
 		}
 	}
 
 	ul:nth-child(1) {
-		width: 33%;
 		list-style: none;
 
 		li {
 			margin-top: 0.5rem;
 			margin-left: 1rem;
 			text-align: left;
+
+			@media screen and (max-width: 900px) {
+				flex-direction: center;
+			}
 		}
 	}
 
 	ul:nth-child(2) {
-		width: 33%;
 		list-style: none;
 
 		li {
@@ -196,13 +203,20 @@
 	}
 
 	ul:nth-child(3) {
-		width: 33%;
 		list-style: none;
 
 		li {
 			margin-top: 0.5rem;
 			margin-right: 1rem;
-			text-align: right;
+			text-align: center;
+
+			@media screen and (max-width: 900px) {
+				flex-direction: column;
+			}
 		}
+	}
+
+	@media screen and (max-width: 900px) {
+		flex-direction: column;
 	}
 }

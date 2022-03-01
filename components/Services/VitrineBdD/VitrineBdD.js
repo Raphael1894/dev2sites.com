@@ -8,7 +8,7 @@ const VitrineBdD = () => {
 		main: {
 			type: 'siteweb',
 			title: 'Site Vitrine avec Base de donnée',
-			description: `L'intégration d'une base de donnée avec votre site vitrine pour la sauvegarde de donnée ou pour mettre en avant vos produits de façon plus dynamique`,
+			description: `Un site vitrine avec une base de donnée pour garder en mémoire tout ce dont vous avez besoin`,
 			price: 'A partir de 1500€',
 			url: '/about03.png'
 		},
