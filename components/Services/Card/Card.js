@@ -90,7 +90,7 @@ const Card = ({ infoOffer }) => {
 										) : infoOffer.main.type === 'forfait' ? (
 											''
 										) : (
-											'Examples de demandes ponctuelles'
+											'Exemples de demandes ponctuelles'
 										)}
 									</p>
 									{infoOffer.listAfter.map((offer, index) => (
