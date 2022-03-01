@@ -1,5 +1,5 @@
 import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
-import MotionWrapper from '../../AppWrapper/MotionWrapper';
+import MotionWrapperLeft from '../../AppWrapper/MotionWrapperLeft';
 import Card from '../Card/Card';
 
 const ForfaitMaintenance = () => {
@@ -19,4 +19,4 @@ const ForfaitMaintenance = () => {
 	return <Card infoOffer={infoOffer} />;
 };
 
-export default ServicesWrapper(MotionWrapper(ForfaitMaintenance, 'app__works'), 'ForfaitMaintenance', 'app__whitebg');
+export default ServicesWrapper(MotionWrapperLeft(ForfaitMaintenance, 'app__works'), 'ForfaitMaintenance', 'app__whitebg');

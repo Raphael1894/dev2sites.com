@@ -19,10 +19,10 @@
 	width: 32px;
 	height: 32px;
 
-	img{
+	img {
 		width: 100%;
 		height: 100%;
-		
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -66,6 +66,17 @@
 				color: var(--secondary-color);
 			}
 		}
+
+		svg {
+			width: 180%;
+			height: auto;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				fill: var(--secondary-color);
+			}
+		}
+
 		&:hover {
 			div {
 				background-color: var(--secondary-color);
@@ -156,6 +167,6 @@
 	}
 }
 
-.app__navbar_motion{
+.app__navbar_motion {
 	opacity: 0;
 }

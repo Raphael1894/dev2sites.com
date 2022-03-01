@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { BiLogInCircle } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 
 import classes from './Navigation.module.scss';
@@ -30,6 +31,12 @@ const Navigation = () => {
 					<div />
 					<Link href="/contact">Contact</Link>
 				</li>
+				{/*<li className="app__flex p-text">
+					<div />
+					<Link href="/login">
+						<BiLogInCircle />
+					</Link>
+	</li>*/}
 			</ul>
 			<div className={classes.app__navbar_menu}>
 				<HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -50,6 +57,9 @@ const Navigation = () => {
 							<li onClick={() => setToggle(false)}>
 								<Link href="/contact">Contact</Link>
 							</li>
+							{/*<li onClick={() => setToggle(false)}>
+								<Link href="/login">Se connecter</Link>
+				</li>*/}
 						</ul>
 					</motion.div>
 				)}

@@ -1,5 +1,5 @@
 import ServicesWrapper from "../../AppWrapper/ServicesWrapper";
-import MotionWrapper from "../../AppWrapper/MotionWrapper";
+import MotionWrapperRight from "../../AppWrapper/MotionWrapperRight";
 import Card from '../Card/Card'
 
 const SiteVitrine = () => {
@@ -21,4 +21,4 @@ const SiteVitrine = () => {
 	return <Card infoOffer={infoOffer}/>;
 };
 
-export default ServicesWrapper(MotionWrapper(SiteVitrine, 'app__works'), 'SiteVitrine', 'app__primarybg');
+export default ServicesWrapper(MotionWrapperRight(SiteVitrine, 'app__works'), 'SiteVitrine', 'app__primarybg');

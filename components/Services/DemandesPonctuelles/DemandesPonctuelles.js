@@ -1,5 +1,5 @@
 import ServicesWrapper from "../../AppWrapper/ServicesWrapper";
-import MotionWrapper from "../../AppWrapper/MotionWrapper";
+import MotionWrapperRight from "../../AppWrapper/MotionWrapperRight";
 import Card from '../Card/Card'
 
 const DemandesPonctuelles = () => {
@@ -21,4 +21,4 @@ const DemandesPonctuelles = () => {
 	);
 };
 
-export default ServicesWrapper(MotionWrapper(DemandesPonctuelles, 'app__works'), 'DemandesPonctuelles', 'app__primarybg');
+export default ServicesWrapper(MotionWrapperRight(DemandesPonctuelles, 'app__works'), 'DemandesPonctuelles', 'app__primarybg');
