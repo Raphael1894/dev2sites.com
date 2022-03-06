@@ -13,6 +13,7 @@ const HomePage = () => {
 					name="description"
 					content="Dev2sites est là pour vous aidez à développer un site à votre image."
 				/>
+				<link rel='icon' href='/favicon.ico'/>
 			</Head>
 			<div className="app">
 				<Header />

@@ -15,6 +15,7 @@ const Services = () => {
 			<Head>
 				<title>Dev2sites - Services</title>
 				<meta name="description" content="Trouvez les différents services proposés par dev2sites." />
+				<link rel='icon' href='/favicon.ico'/>
 			</Head>
 			<div className="app">
 				<ServicesHeader />

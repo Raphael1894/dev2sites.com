@@ -42,8 +42,9 @@ const Contact = () => {
 	return (
 		<Fragment>
 			<Head>
-				<title>Dev2sites - Services</title>
-				<meta name="description" content="Trouvez les différents services proposés par dev2sites." />
+				<title>Dev2sites - Contact</title>
+				<meta name="description" content="Contactez-moi si vous avez une question ou si vous souhaitez prendre rendez-vous." />
+				<link rel='icon' href='/favicon.ico'/>
 			</Head>
 
 			<section className={classes.app__footer}>
