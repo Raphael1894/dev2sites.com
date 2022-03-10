@@ -3,10 +3,11 @@ import ContactWrapper from '../../components/AppWrapper/ContactWrapper';
 import MotionWrapper from '../../components/AppWrapper/MotionWrapper';
 import Head from 'next/head';
 import emailjs from '@emailjs/browser';
-
+import { useTranslation } from 'react-i18next';
 import classes from './contact.module.scss';
 
 const Contact = () => {
+	const { t } = useTranslation();
 	const form = useRef();
 	const [ formData, setFormData ] = useState({ name: '', email: '', message: '' });
 	const [ isFormSubmitted, setIsFormSubmitted ] = useState(false);
@@ -43,12 +44,15 @@ const Contact = () => {
 		<Fragment>
 			<Head>
 				<title>Dev2sites - Contact</title>
-				<meta name="description" content="Contactez-moi si vous avez une question ou si vous souhaitez prendre rendez-vous." />
-				<link rel='icon' href='/favicon.ico'/>
+				<meta
+					name="description"
+					content="Contactez-moi si vous avez une question ou si vous souhaitez prendre rendez-vous."
+				/>
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			<section className={classes.app__footer}>
-				<h2 className="head-text">Contactez-moi</h2>
+				<h2 className="head-text">{t('contact.contactMe')}</h2>
 				<div className={classes.app__footer_cards}>
 					<a href="mailto:contact@dev2sites.com" className="p-text">
 						<div className={classes.app__footer_card}>
@@ -71,7 +75,7 @@ const Contact = () => {
 								className="p-text"
 								type="text"
 								name="name"
-								placeholder="Votre Nom"
+								placeholder={t('contact.name')}
 								value={name}
 								onChange={changeInputHandler}
 							/>
@@ -82,7 +86,7 @@ const Contact = () => {
 								className="p-text"
 								type="email"
 								name="email"
-								placeholder="Votre email"
+								placeholder={t('contact.email')}
 								value={email}
 								onChange={changeInputHandler}
 							/>
@@ -92,25 +96,23 @@ const Contact = () => {
 								required
 								className="p-text"
 								name="message"
-								placeholder="Votre Message"
+								placeholder={t('contact.message')}
 								value={message}
 								onChange={changeInputHandler}
 							/>
 						</div>
 						<button type="button" className="p-text" onClick={submitHandler}>
-							{loading ? 'Envoie en cours' : 'Envoyer'}
+							{loading ? t('contact.sending') : t('contact.send')}
 						</button>
 					</form>
 				) : sendFailed ? (
-					<div>
-						<h3 className="head-text">
-							Un problème est survenue lors de l'envoie du message. Veuillez réessayer plus tard
-						</h3>
+					<div className={classes.problemMessage}>
+						<p className={classes.errorMessage}>{t('contact.problem')}</p>
 					</div>
 				) : (
 					<div>
 						<h3 className="head-text">
-							Merci pour votre <span>message</span> !
+							{t('contact.thankY')} <span>{t('contact.msg')}</span> !
 						</h3>
 					</div>
 				)}

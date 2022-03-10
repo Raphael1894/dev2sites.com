@@ -173,9 +173,9 @@
 
 .flag {
 	cursor: pointer;
-	display: flex;
+	position: absolute;
 	margin-top: 0.4rem;
-	margin-right: 10rem;
+	right: 10rem;
 
 	&:hover {
 		transform: scale(1.1);
@@ -186,15 +186,8 @@
 		height: 32px;
 	}
 
-	@media screen and (max-width: 900px) {
-		display: none;
+	@media screen and (max-width: 950px) {
+		right: 5rem;
 	}
 }
 
-.flagSmall {
-	cursor: pointer;
-
-	&:hover {
-		transform: scale(1.1);
-	}
-}

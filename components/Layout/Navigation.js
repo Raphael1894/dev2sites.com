@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import Link from 'next/link';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
@@ -43,7 +43,7 @@ const Navigation = () => {
 			<ul className={classes.app__navbar_links}>
 				<li className="app__flex p-text">
 					<div />
-					<Link href="/">{t("navigation.home")}</Link>
+					<Link href="/">{t('navigation.home')}</Link>
 				</li>
 				<li className="app__flex p-text">
 					<div />
@@ -69,30 +69,29 @@ const Navigation = () => {
 			<div className={classes.app__navbar_menu}>
 				<HiMenuAlt4 onClick={() => setToggle(true)} />
 				{toggle && (
-					<motion.div
-						whileInView={{ x: [ 300, 0 ], opacity: [ 0, 1 ] }}
-						transition={{ duration: 0.85, ease: 'easeOut' }}
-						className={classes.app__navbar_motion}
-					>
-						<HiX onClick={() => setToggle(false)} />
-						<ul>
-							<li onClick={() => setToggle(false)}>
-								<Link href="/">{t("navigation.home")}</Link>
-							</li>
-							<li onClick={() => setToggle(false)}>
-								<Link href="/Services">Services</Link>
-							</li>
-							<li onClick={() => setToggle(false)}>
-								<Link href="/contact">Contact</Link>
-							</li>
-							{/*<li onClick={() => setToggle(false)}>
+					<Fragment>
+						<motion.div
+							whileInView={{ x: [ 300, 0 ], opacity: [ 0, 1 ] }}
+							transition={{ duration: 0.85, ease: 'easeOut' }}
+							className={classes.app__navbar_motion}
+						>
+							<HiX onClick={() => setToggle(false)} />
+							<ul>
+								<li onClick={() => setToggle(false)}>
+									<Link href="/">{t('navigation.home')}</Link>
+								</li>
+								<li onClick={() => setToggle(false)}>
+									<Link href="/Services">Services</Link>
+								</li>
+								<li onClick={() => setToggle(false)}>
+									<Link href="/contact">Contact</Link>
+								</li>
+								{/*<li onClick={() => setToggle(false)}>
 								<Link href="/login">Se connecter</Link>
 				</li>*/}
-							<li className={classes.flagSmall}>
-								<img src={flag} alt="current language" onClick={changeLanguageHandler} />
-							</li>
-						</ul>
-					</motion.div>
+							</ul>
+						</motion.div>
+					</Fragment>
 				)}
 			</div>
 		</nav>

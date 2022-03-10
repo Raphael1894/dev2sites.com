@@ -4,29 +4,31 @@ import { motion } from 'framer-motion';
 import AppWrapper from '../AppWrapper/AppWrapper';
 import MotionWrapper from '../AppWrapper/MotionWrapper';
 import Link from 'next/link';
+import { useTranslation } from "react-i18next";
 import classes from './Offers.module.scss';
 
 const Offers = () => {
+	const { t } = useTranslation();
 	const [ animateCard, setAnimateCard ] = useState({ y: 0, opacity: 1 });
 
 	const offersList = [
 		{
-			title: 'Pack Jeune Entreprise',
-			description: 'Pour démarrer simplement',
+			title: `${t("offers.pje")}`,
+			description: `${t("offers.pjed")}`,
 			price: '500€',
 			url: '/about01.png',
 			type: 'PackJeuneEntreprise'
 		},
 		{
-			title: 'Site Vitrine',
-			description: 'Une vitrine sur mesure',
+			title: `${t("offers.sv")}`,
+			description: `${t("offers.svd")}`,
 			price: 'A partir de 1000€',
 			url: '/about02.png',
 			type: 'SiteVitrine'
 		},
 		{
-			title: 'Site Vitrine BdD',
-			description: 'Elle répond à toutes vos envies',
+			title: `${t("offers.wl")}`,
+			description: `${t("offers.wld")}`,
 			price: 'A partir de 1500€',
 			url: '/about03.png',
 			type: 'VitrineBdD'
@@ -35,15 +37,15 @@ const Offers = () => {
 
 	const offerPackages = [
 		{
-			title: 'Forfait Gestion',
-			description: 'Ça vous simplifie la vie',
+			title: `${t("offers.fg")}`,
+			description: `${t("offers.fgd")}`,
 			price: '200€/mois',
 			url: '/about04.png',
 			type: 'ForfaitGestion'
 		},
 		{
-			title: 'Forfait Maintenance',
-			description: `Pour une tranquilitée d'esprit`,
+			title: `${t("offers.fm")}`,
+			description: `${t("offers.fmd")}`,
 			price: '200€/mois',
 			url: '/about05.png',
 			type: 'ForfaitMaintenance'
@@ -52,8 +54,8 @@ const Offers = () => {
 
 	const offerWork = [
 		{
-			title: 'Demandes Ponctuelles',
-			description: 'Pour toute autre raison',
+			title: `${t("offers.dp")}`,
+			description: `${t("offers.dpd")}`,
 			price: '50€/heure',
 			url: '/about06.png',
 			type: 'DemandesPonctuelles'
@@ -63,7 +65,7 @@ const Offers = () => {
 	return (
 		<div className={classes.app__offers}>
 			<h2 className="head-text">
-				Mes Differents<span> Services</span>
+			{t("offers.titre")}<span> Services</span>
 			</h2>
 			<motion.div
 				animate={animateCard}
