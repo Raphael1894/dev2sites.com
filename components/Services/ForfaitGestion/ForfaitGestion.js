@@ -1,26 +1,32 @@
 import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
 import MotionWrapper from '../../AppWrapper/MotionWrapper';
-import Card from '../Card/Card'
-import classes from './ForfaitGestion.module.scss'
+import Card from '../Card/Card';
+import { useTranslation } from 'react-i18next';
+import classes from './ForfaitGestion.module.scss';
 
 const ForfaitGestion = () => {
-	
+	const { t } = useTranslation();
+
 	const infoOffer = {
 		main: {
 			type: 'forfait',
-			title: 'Forfait de gestion',
-			description: `Le forfait gestion vous permet de ne plus vous inquieter du bon fonctionnement de votre site`,
-			price: '200€/mois',
+			title: `${t('services.fg')}`,
+			description: `${t('services.fgd')}`,
+			price: `${t('services.fgp')}`,
 			url: '/about04.png'
 		},
 		listWebsite: [ '' ],
-		listAfter: ['Gestion des dépendances (ex: GitHub, herbergement)', `Vérification hebdomadaire du bon fonctionnement du site`, 'Sauvegarde mensuelle du site', '0 maux de tête', '_', 'Si vous avez le forfait maintenance et si nécessaire, la maintenance sera effectuée suite à la vérification hebdomadaire'],
-		listMore: [``],
+		listAfter: [
+			`${t('services.fgla1')}`,
+			`${t('services.fgla2')}`,
+			`${t('services.fgla3')}`,
+			`${t('services.fgla4')}`,
+			`${t('services.fgla5')}`
+		],
+		listMore: [ `` ]
 	};
 
-	return (
-	<Card infoOffer={infoOffer}/>
-	);
+	return <Card infoOffer={infoOffer} />;
 };
 
 export default ServicesWrapper(MotionWrapper(ForfaitGestion, 'app__works'), 'ForfaitGestion', 'app__primarybg');

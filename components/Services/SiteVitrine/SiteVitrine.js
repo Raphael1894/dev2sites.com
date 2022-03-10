@@ -1,24 +1,36 @@
-import ServicesWrapper from "../../AppWrapper/ServicesWrapper";
-import MotionWrapper from "../../AppWrapper/MotionWrapper";
-import Card from '../Card/Card'
+import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
+import MotionWrapper from '../../AppWrapper/MotionWrapper';
+import Card from '../Card/Card';
+import { useTranslation } from 'react-i18next';
 
 const SiteVitrine = () => {
+	const { t } = useTranslation();
 
 	const infoOffer = {
 		main: {
 			type: 'siteweb',
-			title: 'Site Vitrine',
-			description: `Un site fait sur mesure aves des technologies de pointe`,
-			price: 'A partir de 1000€',
+			title: `${t('services.sv')}`,
+			description: `${t('services.svd')}`,
+			price: `${t('services.svp')}`,
 			url: '/about02.png'
 		},
-		listWebsite: [ 'Développé avec Next.js', 'Fait sur mesure', `Pas de limite de pages`, 'Site web tout support (ordinateur, mobile)', `Optimisation du référencement (SEO)` ],
-		listAfter: [`Formation de l'utilisation du site`, `Maintenance offerte pour la semaine suivant la remise du site`, 'Accès à la plateforme de connexion sur ce site'],
-		listMore: [`Accompagnement pour l'achat du nom de domaine`, 'Site évolutif', 'Rendez-vous avant le développement pour définir vos besoins', 'Retouches du site offertes pendant la semaine suivant la remise du site'],
+		listWebsite: [
+			`${t('services.svlw1')}`,
+			`${t('services.svlw2')}`,
+			`${t('services.svlw3')}`,
+			`${t('services.svlw4')}`,
+			`${t('services.svlw5')}`
+		],
+		listAfter: [ `${t('services.svla1')}`, `${t('services.svla2')}`, `${t('services.svla3')}` ],
+		listMore: [
+			`${t('services.svla1')}`,
+			`${t('services.svla2')}`,
+			`${t('services.svla3')}`,
+			`${t('services.svla4')}`
+		]
 	};
 
-
-	return <Card infoOffer={infoOffer}/>;
+	return <Card infoOffer={infoOffer} />;
 };
 
 export default ServicesWrapper(MotionWrapper(SiteVitrine, 'app__works'), 'SiteVitrine', 'app__primarybg');

@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import PackJeuneEntreprise from '../../components/Services/PackJeuneEntreprise/PackJeuneEntreprise';
 import SiteVitrine from '../../components/Services/SiteVitrine/SiteVitrine';
-import VitrineBdD from '../../components/Services/VitrineBdD/VitrineBdD';
+import WebLogiciel from '../../components/Services/WebLogiciel/WebLogiciel';
 import ForfaitGestion from '../../components/Services/ForfaitGestion/ForfaitGestion';
 import ForfaitMaintenance from '../../components/Services/ForfaitMaintenance/ForfaitMaintenance';
 import DemandesPonctuelles from '../../components/Services/DemandesPonctuelles/DemandesPonctuelles';
@@ -22,7 +22,7 @@ const Services = () => {
 				<ServicesList />
 				<PackJeuneEntreprise />
 				<SiteVitrine />
-				<VitrineBdD />
+				<WebLogiciel />
 				<ForfaitGestion />
 				<ForfaitMaintenance />
 				<DemandesPonctuelles />

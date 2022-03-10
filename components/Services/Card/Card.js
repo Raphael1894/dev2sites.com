@@ -1,10 +1,11 @@
 import { Fragment, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs';
-
+import { useTranslation } from 'react-i18next';
 import classes from './Card.module.scss';
 
 const Card = ({ infoOffer }) => {
+	const { t } = useTranslation();
 	const [ animateCard, setAnimateCard ] = useState({ y: 0, opacity: 1 });
 	const [ showDetails, setShowDetails ] = useState(false);
 	const [ showArrowDown, setShowArrowDown ] = useState(true);
@@ -64,12 +65,16 @@ const Card = ({ infoOffer }) => {
 					{showDetails && (
 						<Fragment>
 							<hr className={classes.hr} />
-							<p className={classes.detailTitle}>Détails de l'offre</p>
 							<div className={classes.detailsContainer}>
-								<motion.ul variants={container} initial="hidden" animate="show" className={classes.cardUl}>
+								<motion.ul
+									variants={container}
+									initial="hidden"
+									animate="show"
+									className={classes.cardUl}
+								>
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
-											'Développement du site'
+											`${t('services.cardSubT1')}`
 										) : infoOffer.main.type === 'forfait' ? (
 											''
 										) : (
@@ -83,14 +88,19 @@ const Card = ({ infoOffer }) => {
 										</motion.li>
 									))}
 								</motion.ul>
-								<motion.ul variants={container} initial="hidden" animate="show"  className={classes.cardUl}>
+								<motion.ul
+									variants={container}
+									initial="hidden"
+									animate="show"
+									className={classes.cardUl}
+								>
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
-											'Après remise du site'
+											`${t('services.cardSubT2')}`
 										) : infoOffer.main.type === 'forfait' ? (
-											''
+											`${t('services.cardTitle')}`
 										) : (
-											'Exemples de demandes ponctuelles'
+											`${t('services.cardSubT3')}`
 										)}
 									</p>
 									{infoOffer.listAfter.map((offer, index) => (
@@ -99,10 +109,15 @@ const Card = ({ infoOffer }) => {
 										</motion.li>
 									))}
 								</motion.ul>
-								<motion.ul variants={container} initial="hidden" animate="show"  className={classes.cardUl}>
+								<motion.ul
+									variants={container}
+									initial="hidden"
+									animate="show"
+									className={classes.cardUl}
+								>
 									<p className={classes.detailListTitle}>
 										{infoOffer.main.type === 'siteweb' ? (
-											'Autres'
+											`${t('services.cardSubT4')}`
 										) : infoOffer.main.type === 'forfait' ? (
 											''
 										) : (

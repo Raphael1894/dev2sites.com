@@ -1,8 +1,10 @@
 import { Fragment, useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import classes from './ServiceList.module.scss';
 
 const ServicesList = () => {
+	const { t } = useTranslation();
 	const [ showNav, setShowNav ] = useState(false);
 
   useEffect(() => {
@@ -22,12 +24,12 @@ const ServicesList = () => {
 			{showNav ? (
 				<div className={classes.ServiceList}>
 					<p className={classes.title}>Services</p>
-					<Link href={`#PackJeuneEntreprise`}>Pack Jeune Entreprise</Link>
-					<Link href={`#SiteVitrine`}>Site Vitrine</Link>
-					<Link href={`#VitrineBdD`}>Site vitrine avec base de donnée</Link>
-					<Link href={`#ForfaitGestion`}>Forfait Gestion</Link>
-					<Link href={`#ForfaitMaintenance`}>Forfait maintenance</Link>
-					<Link href={`#DemandesPonctuelles`}>Demandes ponctuelles</Link>
+					<Link href={`#PackJeuneEntreprise`}>{t('servicesList.pje')}</Link>
+					<Link href={`#SiteVitrine`}>{t('servicesList.sv')}</Link>
+					<Link href={`#WebLogiciel`}>{t('servicesList.wl')}</Link>
+					<Link href={`#ForfaitGestion`}>{t('servicesList.fg')}</Link>
+					<Link href={`#ForfaitMaintenance`}>{t('servicesList.fm')}</Link>
+					<Link href={`#DemandesPonctuelles`}>{t('servicesList.dp')}</Link>
 				</div>
 			) : (
 				<div />

@@ -1,19 +1,23 @@
 import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
 import MotionWrapper from '../../AppWrapper/MotionWrapper';
 import Card from '../Card/Card';
+import { useTranslation } from 'react-i18next';
 
 const ForfaitMaintenance = () => {
+	const { t } = useTranslation();
+
 	const infoOffer = {
 		main: {
 			type: 'forfait',
-			title: 'Forfait maintenance',
-			description: `Avec le forfait maintenance vous offre5h de maintenance par mois afin de répondre au moindre problème le plus efficacement possible`,
-			price: '200€/mois',
+			title: `${t('services.fm')}`,
+			description: `${t('services.fmd')}`,
+			price: `${t('services.fmp')}`,
 			url: '/about05.png'
 		},
 		listWebsite: [ '' ],
-		listAfter: ['5 heures de maintenance incluses', 'Début du dépannage sous 48h'],
-		listMore: [``]
+		listAfter: [ `${t('services.fmla1')}`,
+		`${t('services.fmla2')}` ],
+		listMore: [ `` ]
 	};
 
 	return <Card infoOffer={infoOffer} />;

@@ -15,23 +15,23 @@ const Offers = () => {
 		{
 			title: `${t("offers.pje")}`,
 			description: `${t("offers.pjed")}`,
-			price: '500€',
+			price: `${t("offers.pjep")}`,
 			url: '/about01.png',
 			type: 'PackJeuneEntreprise'
 		},
 		{
 			title: `${t("offers.sv")}`,
 			description: `${t("offers.svd")}`,
-			price: 'A partir de 1000€',
+			price: `${t("offers.svp")}`,
 			url: '/about02.png',
 			type: 'SiteVitrine'
 		},
 		{
 			title: `${t("offers.wl")}`,
 			description: `${t("offers.wld")}`,
-			price: 'A partir de 1500€',
+			price: `${t("offers.wlp")}`,
 			url: '/about03.png',
-			type: 'VitrineBdD'
+			type: 'WebLogiciel'
 		}
 	];
 
@@ -39,14 +39,14 @@ const Offers = () => {
 		{
 			title: `${t("offers.fg")}`,
 			description: `${t("offers.fgd")}`,
-			price: '200€/mois',
+			price: `${t("offers.fgp")}`,
 			url: '/about04.png',
 			type: 'ForfaitGestion'
 		},
 		{
 			title: `${t("offers.fm")}`,
 			description: `${t("offers.fmd")}`,
-			price: '200€/mois',
+			price: `${t("offers.fmp")}`,
 			url: '/about05.png',
 			type: 'ForfaitMaintenance'
 		}
@@ -56,7 +56,7 @@ const Offers = () => {
 		{
 			title: `${t("offers.dp")}`,
 			description: `${t("offers.dpd")}`,
-			price: '50€/heure',
+			price: `${t("offers.dpp")}`,
 			url: '/about06.png',
 			type: 'DemandesPonctuelles'
 		}

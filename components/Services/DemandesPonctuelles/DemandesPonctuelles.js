@@ -1,24 +1,33 @@
-import ServicesWrapper from "../../AppWrapper/ServicesWrapper";
-import MotionWrapper from "../../AppWrapper/MotionWrapper";
-import Card from '../Card/Card'
+import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
+import MotionWrapper from '../../AppWrapper/MotionWrapper';
+import Card from '../Card/Card';
+import { useTranslation } from 'react-i18next';
 
 const DemandesPonctuelles = () => {
+	const { t } = useTranslation();
 
 	const infoOffer = {
 		main: {
 			type: 'ponctuel',
-			title: 'Demandes ponctuelles',
-			description: `Si vous avez besoin d'apporter une modification à votre site ou d'y faire de la maintenance`,
-			price: '50€/heure',
+			title: `${t('services.dp')}`,
+			description: `${t('services.dpd')}`,
+			price: `${t('services.dpp')}`,
 			url: '/about06.png'
 		},
 		listWebsite: [ '' ],
-		listAfter: [`Maintenance du site`, `Extension du forfait de maintenance`, 'Modifications du site', `Formation utilisation du site`],
-		listMore: [''],
+		listAfter: [
+			`${t('services.dpla1')}`,
+			`${t('services.dpla2')}`,
+			`${t('services.dpla3')}`,
+			`${t('services.dpla4')}`
+		],
+		listMore: [ '' ]
 	};
-	return (
-	<Card infoOffer={infoOffer}/>
-	);
+	return <Card infoOffer={infoOffer} />;
 };
 
-export default ServicesWrapper(MotionWrapper(DemandesPonctuelles, 'app__works'), 'DemandesPonctuelles', 'app__primarybg');
+export default ServicesWrapper(
+	MotionWrapper(DemandesPonctuelles, 'app__works'),
+	'DemandesPonctuelles',
+	'app__primarybg'
+);

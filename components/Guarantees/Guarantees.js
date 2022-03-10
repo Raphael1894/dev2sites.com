@@ -1,39 +1,41 @@
 import { motion } from 'framer-motion';
 import AppWrapper from '../AppWrapper/AppWrapper';
 import MotionWrapper from '../AppWrapper/MotionWrapper';
+import { useTranslation } from 'react-i18next';
 import classes from './Guarantees.module.scss';
 
 const Guarantees = () => {
+	const { t } = useTranslation();
+
 	const guarantees = [
 		{
-			title: 'Un site sécurisé',
-			description: 'la sécurité sur un site internet est fondamentale et est au coeur de toutes mes offres',
+			title: `${t('guarantees.titre1')}`,
+			description: `${t('guarantees.description1')}`,
 			url: '/about01.png'
 		},
 		{
-			title: 'Des fontionnalitées adaptées',
-			description: 'Selon vos besoins, je vous conseille pour trouver les meilleures éléments à développer',
+			title: `${t('guarantees.titre2')}`,
+			description: `${t('guarantees.description2')}`,
 			url: '/about02.png'
 		},
 		{
-			title: 'Adequation avec votre budget',
-			description:
-				"J'adapte les services selon vos besoin, et je recherche les hebergeur proposant les meilleures prix avec une bonne fiabilitée",
-			url: "/about03.png"
+			title: `${t('guarantees.titre3')}`,
+			description: `${t('guarantees.description3')}`,
+			url: '/about03.png'
 		},
 		{
-			title: 'De la transparence',
-			description: 'Pas de frais cachés et des décisions avant tout axés sur vos besoins',
+			title: `${t('guarantees.titre4')}`,
+			description: `${t('guarantees.description4')}`,
 			url: '/about04.png'
 		},
 		{
-			title: 'Une collaboration pérenne',
-			description: "Je m'engage à développer mes compétences a fin d'offrir les meilleures prestations'",
+			title: `${t('guarantees.titre5')}`,
+			description: `${t('guarantees.description5')}`,
 			url: '/about05.png'
 		},
 		{
-			title: '0 maux de têtes',
-			description: 'Un interlocuteur, une expérience fluide',
+			title: `${t('guarantees.titre6')}`,
+			description: `${t('guarantees.description6')}`,
 			url: '/about06.png'
 		}
 	];
@@ -41,8 +43,8 @@ const Guarantees = () => {
 	return (
 		<div className={classes.app__guarantees}>
 			<h2 className="head-text">
-				I know that <span>Good Development</span>
-				<br /> means <span>Good Business</span>
+			{t('guarantees.titre01')}<span>{t('guarantees.titre02')}</span>
+				<br />{t('guarantees.titre03')}<span>{t('guarantees.titre04')}</span>
 			</h2>
 
 			<div className={classes.app__profiles}>
@@ -55,7 +57,7 @@ const Guarantees = () => {
 						key={guarantee.title + index}
 					>
 						<div className={classes.image_wrapper}>
-							<img src={guarantee.url} alt={guarantee.title}/>
+							<img src={guarantee.url} alt={guarantee.title} />
 						</div>
 						<h2 className="bold-text" style={{ marginTop: 20 }}>
 							{guarantee.title}
