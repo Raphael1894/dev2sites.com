@@ -171,8 +171,12 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					tag2: 'Freelancer'
 				},
 				guarantees: {
+					titre01: 'I know that ',
+					titre02: 'Good Development',
+					titre03: ' means ',
+					titre04: 'Good Business',
 					titre1: 'A secured website',
-					description1: 'security on a website is fundamental and is at the heart of all my offers',
+					description1: 'Security on a website is fundamental and is at the heart of all my offers',
 					titre2: `Adapted functionalities`,
 					description2: `Depending on your needs, I advise you to find the best elements to develop`,
 					titre3: `Adequacy with your budget`,
@@ -186,10 +190,6 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					One interlocutor, a seamless experience`
 				},
 				offers: {
-					titre01: 'I know that ',
-					titre02: 'Good Development',
-					titre03: ' means ',
-					titre04: 'Good Business',
 					titre: 'My various',
 					pje: 'Young Business Starter',
 					pjed: 'For an easy start',

@@ -25,10 +25,10 @@ const WebLogiciel = () => {
 		],
 		listAfter: [ `${t('services.wlla1')}`, `${t('services.wlla2')}`, `${t('services.wlla3')}` ],
 		listMore: [
-			`${t('services.wlla1')}`,
-			`${t('services.wlla2')}`,
-			`${t('services.wlla3')}`,
-			`${t('services.wlla4')}`
+			`${t('services.wllm1')}`,
+			`${t('services.wllm2')}`,
+			`${t('services.wllm3')}`,
+			`${t('services.wllm4')}`
 		]
 	};
 

@@ -21,6 +21,7 @@ const ForfaitGestion = () => {
 			`${t('services.fgla2')}`,
 			`${t('services.fgla3')}`,
 			`${t('services.fgla4')}`,
+			'_',
 			`${t('services.fgla5')}`
 		],
 		listMore: [ `` ]

@@ -23,10 +23,10 @@ const SiteVitrine = () => {
 		],
 		listAfter: [ `${t('services.svla1')}`, `${t('services.svla2')}`, `${t('services.svla3')}` ],
 		listMore: [
-			`${t('services.svla1')}`,
-			`${t('services.svla2')}`,
-			`${t('services.svla3')}`,
-			`${t('services.svla4')}`
+			`${t('services.svlm1')}`,
+			`${t('services.svlm2')}`,
+			`${t('services.svlm3')}`,
+
 		]
 	};
 
