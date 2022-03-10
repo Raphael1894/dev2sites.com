@@ -1,5 +1,3 @@
-import NavigationDots from '../Layout/NavigationDots';
-
 const ServicesWrapper = (Component, idName, classNames) =>
 	function HOC() {
 		return (

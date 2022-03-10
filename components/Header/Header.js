@@ -1,8 +1,11 @@
 import classes from './Header.module.scss';
 import { motion } from 'framer-motion';
 import AppWrapper from '../AppWrapper/AppWrapper';
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
+
 	const scaleVariants = {
 		whileInView: {
 			scale: [ 0, 1 ],
@@ -26,14 +29,14 @@ const Header = () => {
 					<div className={`${classes.badge_cmp} ${'app__flex'}`}>
 						<span>👋</span>
 						<div style={{ marginLeft: 20 }}>
-							<p className="p-text">Bonjour et </p>
-							<h1 className="head-text">Bienvenue</h1>
+							<p className="p-text">{t("header.badge1")}</p>
+							<h1 className="head-text">{t("header.badge2")}</h1>
 						</div>
 					</div>
 
 					<div className={`${classes.tag_cmp} ${'app__flex'}`}>
-						<p className="p-text">Web Developer </p>
-						<p className="p-text">Freelancer</p>
+						<p className="p-text">{t("header.tag1")}</p>
+						<p className="p-text">{t("header.tag2")}</p>
 					</div>
 				</div>
 			</motion.div>
@@ -51,8 +54,7 @@ const Header = () => {
 				</span>
 				<motion.div
 					whileInView={{ scale: [ 0, 1 ] }}
-					transition={{ duration: 1, ease: 'easeInOut' }}
-					className={classes.app__header_img}
+					transition={{ duration: 1, ease: 'easeInOut' }}	
 					alt="circle"
 					className={classes.overlay_circle}
 				>

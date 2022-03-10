@@ -1,5 +1,5 @@
 import { useState, useRef, Fragment } from 'react';
-import AppWrapper from '../../components/AppWrapper/AppWrapper';
+import ContactWrapper from '../../components/AppWrapper/ContactWrapper';
 import MotionWrapper from '../../components/AppWrapper/MotionWrapper';
 import Head from 'next/head';
 import emailjs from '@emailjs/browser';
@@ -119,4 +119,4 @@ const Contact = () => {
 	);
 };
 
-export default AppWrapper(MotionWrapper(Contact, 'app__footer'), 'contact', 'app__whitebg');
+export default ContactWrapper(MotionWrapper(Contact, 'app__footer'), 'contact', 'app__whitebg');

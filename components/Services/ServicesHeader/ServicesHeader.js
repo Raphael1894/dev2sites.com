@@ -1,8 +1,12 @@
+import { Fragment } from 'react';
 import ServicesWrapper from '../../AppWrapper/ServicesWrapper';
 import classes from './ServicesHeader.module.scss';
 import { motion } from 'framer-motion';
-import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
+
 const ServicesHeader = () => {
+	const { t } = useTranslation();
+
 	const scaleVariants = {
 		whileInView: {
 			scale: [ 0, 1 ],
@@ -27,8 +31,8 @@ const ServicesHeader = () => {
 						<div className={`${classes.badge_cmp} ${'app__flex'}`}>
             
 							<div style={{ marginLeft: 20 }}>
-								<h1 className="head-text"> Détails <span>⭐</span></h1>
-								<p className="head-text"><span>des offres </span></p>
+								<h1 className="head-text">{t("servicesHeader.offer")}<span>⭐</span></h1>
+								<p className="head-text"><span>{t("servicesHeader.details")}</span></p>
 							</div>
 						</div>
 					</div>

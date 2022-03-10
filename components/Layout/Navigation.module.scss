@@ -59,7 +59,7 @@
 			flex-direction: column;
 			text-transform: uppercase;
 			font-weight: 500;
-
+			font-size: large;
 			transition: all 0.3s ease-in-out;
 
 			&:hover {
@@ -169,4 +169,32 @@
 
 .app__navbar_motion {
 	opacity: 0;
+}
+
+.flag {
+	cursor: pointer;
+	display: flex;
+	margin-top: 0.4rem;
+	margin-right: 10rem;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	img {
+		width: 32px;
+		height: 32px;
+	}
+
+	@media screen and (max-width: 900px) {
+		display: none;
+	}
+}
+
+.flagSmall {
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 }
