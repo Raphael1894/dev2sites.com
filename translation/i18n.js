@@ -21,21 +21,21 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					tag2: 'Freelance'
 				},
 				guarantees: {
-					titre01: `Je sais que `,
-					titre02: 'Bon Développement',
-					titre03: '  est synonyme de ',
-					titre04: 'Bon Business',
+					titre01: `Parce qu'un `,
+					titre02: 'Bon Business',
+					titre03: ' commence par un ',
+					titre04: 'Bon Développement',
 					titre1: 'Un site sécurisé',
 					description1:
 						'La sécurité sur un site internet est fondamentale et est au coeur de toutes mes offres',
 					titre2: `Des fontionnalitées adaptées`,
-					description2: `Selon vos besoins, je vous conseille pour trouver les meilleures éléments à développer`,
-					titre3: `Adequation avec votre budget`,
-					description3: `J'adapte les services selon vos besoin, et je recherche les hebergeur proposant les meilleures prix avec une excellente fiabilitée`,
+					description2: `Selon vos besoins, je vous conseille pour trouver les meilleurs éléments à développer`,
+					titre3: `Adéquation avec votre budget`,
+					description3: `J'adapte les services selon vos besoin, et je recherche les hébergeur proposant les meilleurs prix avec une excellente fiabilité`,
 					titre4: `De la transparence`,
-					description4: `Pas de frais cachés et des décisions avant tout axés sur vos besoins`,
+					description4: `Pas de frais cachés et des décisions avant tout axées sur vos besoins`,
 					titre5: `Une collaboration pérenne`,
-					description5: `Je m'engage à développer mes compétences a fin d'offrir les meilleures prestations`,
+					description5: `Je m'engage à développer mes compétences afin d'offrir les meilleures prestations`,
 					titre6: `0 maux de têtes`,
 					description6: `Un interlocuteur, une expérience fluide`
 				},
@@ -54,10 +54,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					fgd: 'Ça vous simplifie la vie',
 					fgp: '200€/mois',
 					fm: 'Forfait Maintenance',
-					fmd: `Pour une tranquilitée d'esprit`,
+					fmd: `Pour une tranquilité d'esprit`,
 					fmp: '200€/mois',
 					dp: 'Demandes Ponctuelles',
-					dpd: 'Pour toute autre raison',
+					dpd: 'Pour toutes autres raisons',
 					dpp: '50€/heure'
 				},
 				servicesHeader: {
@@ -81,7 +81,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					pje: 'Pack Jeune Entreprise',
 					pjed: `Le pack jeune entreprise est le meilleur moyen de démarrer sur internet avec un petit budget.`,
 					pjelw1: 'Développé avec Wordpress',
-					pjelw2: 'Séléction parmis plusieurs maquettes prédifinies',
+					pjelw2: 'Séléction parmi plusieurs maquettes prédifinies',
 					pjelw3: `Présentation générale de votre activité`,
 					pjelw4: `Liens vers vos réseaux sociaux`,
 					pjelw5: 'Formulaire de contact',
@@ -153,7 +153,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					message: 'Votre message',
 					send: 'Envoyer',
 					sending: 'Envoie en cours',
-					problem: `Un problème est survenue lors de l'envoie du message. Veuillez réessayer plus tard`,
+					problem: `Un problème est survenu lors de l'envoie du message. Veuillez réessayer plus tard`,
 					thankY: 'Merci pour votre ',
 					mesg: 'Message'
 				}
