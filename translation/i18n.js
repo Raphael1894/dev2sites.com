@@ -155,7 +155,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 					sending: 'Envoie en cours',
 					problem: `Un problème est survenu lors de l'envoie du message. Veuillez réessayer plus tard`,
 					thankY: 'Merci pour votre ',
-					mesg: 'Message'
+					msg: 'Message'
 				}
 			}
 		},
