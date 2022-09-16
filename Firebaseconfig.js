@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 
+/*Firebase configuration elements - data is in .env*/
 const config = {
   apiKey: process.env.NEXT_APP_API_KEY,
   authDomain: process.env.NEXT_APP_AUTH_DOMAIN,

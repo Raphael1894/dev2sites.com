@@ -1,7 +1,8 @@
-import { Fragment } from 'react';
+import { Fragment } from "react";
+import Navigation from "./Navigation";
+import Footer from "../Footer/Footer";
 
-import Navigation from './Navigation';
-import Footer from '../Footer/Footer'
+/*Layout configuration*/
 
 const Layout = (props) => {
   return (
@@ -14,4 +15,3 @@ const Layout = (props) => {
 };
 
 export default Layout;
-
